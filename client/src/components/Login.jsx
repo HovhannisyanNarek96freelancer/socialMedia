@@ -41,10 +41,9 @@ const Login = () => {
           <div className="p-5">
             <img src={logo} width="130px" />
           </div>
-
           <div className="shadow-2xl">
             <GoogleLogin
-              clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
+              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
               render={(renderProps) => (
                 <button
                   type="button"
@@ -52,7 +51,7 @@ const Login = () => {
                   onClick={renderProps.onClick}
                   disabled={renderProps.disabled}
                 >
-                  <FcGoogle className="mr-4" /> Sign in with google
+                  <FcGoogle className="mr-4" /> Sign in with Google
                 </button>
               )}
               onSuccess={responseGoogle}
